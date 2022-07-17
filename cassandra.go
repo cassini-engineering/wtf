@@ -6,14 +6,14 @@ import (
 )
 
 var (
-	errRowAlreadyExists = errors.New("duplicate key, row already exists")
-	errNoResults        = errors.New("no results found")
+	ErrRowAlreadyExists = errors.New("duplicate key, row already exists")
+	ErrNoResults        = errors.New("no results found")
 )
 
 var (
 	cassandraErrors = map[string]error{
-		"duplicate": errRowAlreadyExists,
-		"not exist": errNoResults,
+		"duplicate": ErrRowAlreadyExists,
+		"not exist": ErrNoResults,
 	}
 )
 
